@@ -7,6 +7,7 @@
  * https://docs.spacexdata.com/
 
 ## Test Data
+[File json](https://github.com/GuzelyaN/Postman/blob/Overview/TestDataFile.json)
 
 
 ## Collections
