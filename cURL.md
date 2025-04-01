@@ -1,10 +1,12 @@
-# 📌 API Requests for Reqres.in  
+# 📌 API Requests for Reqres.in
 
-This document provides **cURL** examples for interacting with the **Reqres.in** API, including user creation, authentication, updates, and deletion.  
+This document provides **cURL** examples for interacting with the **Reqres.in** API, covering user creation, authentication, updates, and deletion. Additionally, error handling scenarios are included to ensure robustness.
 
-## 🔹 User Registration & Authentication  
+---
 
-### 🚀 **Register a New User**  
+## 🔹 **User Registration & Authentication**
+
+### 🚀 **Register a New User**
 ```bash
 curl --location 'https://reqres.in/api/register' \
 --header 'Content-Type: application/json' \
@@ -14,7 +16,39 @@ curl --location 'https://reqres.in/api/register' \
 }'
 ```
 
-### 🔐 **User Login**  
+#### **Error Handling: Bad Request (400)**
+```bash
+curl --location 'https://reqres.in/api/register' \
+--data-raw '{
+    "email": "eve.holt@reqres.in"111,  # Invalid email format
+    "password": "pistol"
+}'
+```
+- **Expected Response:**
+```json
+{
+  "error": "Bad Request"
+}
+```
+
+#### **Error Handling: Incorrect User (400)**
+```bash
+curl --location --globoff 'https://reqres.in/api/register' \
+--data-raw '{
+    "email": "eva@gmail.com",
+    "password": "pistol"
+}'
+```
+- **Expected Response:**
+```json
+{
+    "error": "Note: Only defined users succeed registration"
+}
+```
+
+---
+
+### 🔐 **User Login**
 ```bash
 curl --location 'https://reqres.in/api/login' \
 --header 'Content-Type: application/json' \
@@ -24,7 +58,24 @@ curl --location 'https://reqres.in/api/login' \
 }'
 ```
 
-### 📝 **Register Another User**  
+#### 🔐 **Error Handling: Missing Password**
+```bash
+curl --location 'https://reqres.in/api/login' \
+--data-raw '{
+    "email": "eve.holt@reqres.in",
+    "password": ""  # Empty password
+}'
+```
+- **Expected Response:**
+```json
+{
+  "error": "Missing password"
+}
+```
+
+---
+
+### 📝 **Register Another User**
 ```bash
 curl --location 'https://reqres.in/api/register' \
 --header 'Content-Type: application/json' \
@@ -34,23 +85,51 @@ curl --location 'https://reqres.in/api/register' \
 }'
 ```
 
-## 🔹 User Data Management  
+#### 🔐 **Error Handling: Missing Password**
+```bash
+curl --location 'https://reqres.in/api/login' \
+--data-raw '{
+    "email": "eve.holt@reqres.in",
+    "password": ""  # Empty password
+}'
+```
+- **Expected Response:**
+```json
+{
+  "error": "Missing password"
+}
+```
 
-### 📄 **Get User Data**  
+---
+
+## 🔹 **User Data Management**
+
+### 📄 **Get User Data**
 ```bash
 curl --location 'https://reqres.in/api/users/2'
 ```
 
-### ✏️ **Update User (PATCH)**  
+#### **Error Handling: Not Found (404)**
 ```bash
-curl --location --request PATCH 'https://reqres.in/api/users/' \
+curl --location 'https://reqres.in/api/users/sdfsdf'  # Non-existent user ID
+```
+- **Expected Response:**
+```json
+{
+  "error": "User not found"
+}
+```
+
+### ✏️ **Update User Data (PATCH)**
+```bash
+curl --location --request PATCH 'https://reqres.in/api/users/2' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "email": "123@123"
 }'
 ```
 
-### 🔄 **Update User Data (PUT)**  
+### 🔄 **Update User Data (PUT)**
 ```bash
 curl --location --request PUT 'https://reqres.in/api/users/2' \
 --header 'Content-Type: application/json' \
@@ -60,10 +139,16 @@ curl --location --request PUT 'https://reqres.in/api/users/2' \
 }'
 ```
 
-### ❌ **Delete User**  
+### ❌ **Delete User**
 ```bash
 curl --location --request DELETE 'https://reqres.in/api/users/2'
 ```
 
-📌 **Note:** Modify the request payloads as needed.  
+---
+
+📌 **Note:** Modify the request payloads as needed for your testing purposes. Always ensure you are testing edge cases like missing parameters, invalid formats, and error scenarios.
+
+
+
+
 
