@@ -2,6 +2,7 @@
 
 ## Collections
 * [Reqres API](https://github.com/GuzelyaN/Postman/blob/Overview/Reqres%20API.postman_collection.json)
+* [Petstore API](https://github.com/GuzelyaN/Postman/blob/Overview/Swagger%20Petstore.postman_collection.json)
 
 ## Sandboxes
 
