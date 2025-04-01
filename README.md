@@ -6,7 +6,7 @@
 
 ## Sandboxes
 
- * WSS https://app.gosandy.io/
+ * https://app.gosandy.io/ WSS 
  * https://petstore.swagger.io/#/user/createUser
  * https://docs.spacexdata.com/
  * https://www.alphavantage.co/documentation/
