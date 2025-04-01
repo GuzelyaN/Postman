@@ -17,39 +17,10 @@
 ## Useful
 
 * https://habr.com/ru/articles/881814/ - sandboxes
+* https://www.youtube.com/watch?v=KdCAV4SzvqQ - guide
 
 ## Test Data
 [File json](https://github.com/GuzelyaN/Postman/blob/Overview/TestDataFile.json)
 
-# API Testing Portfolio
-
-## 🔹 Содержимое  
-
-📂 **Postman_Collections/** – коллекции API-тестов для Postman  
-📂 **Requests_Examples/** – примеры отдельных запросов (GET, POST, DELETE и др.)  
-
-## 🔹 Как использовать  
-
-1. **Postman**:  
-   - Импортируйте коллекции из `Postman_Collections` в Postman.  
-   - Настройте переменные окружения при необходимости.  
-   - Запустите тесты в Postman или Newman.  
-
-2. **Ручное тестирование**:  
-   - Используйте файлы из `Requests_Examples`, чтобы отправлять запросы через Postman, cURL или другие инструменты.  
-
-## 🔹 Примеры запросов  
-
-### 1️⃣ **GET /users** – Получение списка пользователей  
-```json
-{
-    "method": "GET",
-    "url": "https://api.example.com/users",
-    "headers": {
-        "Authorization": "Bearer your_token",
-        "Accept": "application/json"
-    }
-}
 
 
- 
