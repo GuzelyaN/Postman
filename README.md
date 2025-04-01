@@ -13,8 +13,9 @@
    Free Plan: Request Limits: 5 requests per minute, 500 requests per day. Access to most features, including stock price data, currency pairs, cryptocurrencies, and technical indicators.
    Availability: This plan is ideal for infrequent use, prototyping, or small projects.
 * https://dadata.ru/api/
-  ** Сервис для работы с данными, предоставляющий различные API для обработки, очистки и стандартизации информации. Он предлагает инструменты для работы с различными типами данных, включая адреса, компании, ФИО, телефоны, email и другие. Очень разнообразный и обширный функционал для применения.
-  ** Базовый бесплатный план: Позволяет выполнять определенное количество запросов в день. Обычно это около 100–500 запросов в сутки. Подходит для тестирования и небольших проектов. Имеют ограничения по частоте запросов: обычно ограничивается 1-2 запросами в секунду.
+  A service for working with data, providing various APIs for processing, cleaning, and standardizing information. It offers tools for working with different types of data, including addresses, companies, full names, phone numbers, emails, and more.
+  It has a diverse and extensive set of features for various applications.
+  Basic Free Plan: Allows a certain number of requests per day, typically around 100–500 requests per day. Suitable for testing and small projects. There are limitations on the request frequency, usually restricted to 1-2 requests per second.
 
 ## Useful
 
