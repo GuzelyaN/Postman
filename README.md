@@ -1,4 +1,5 @@
 # 📑 Postman
+This repository contains a collection of Postman resources, including Postman collections, requests examples, and sandboxes for exploring various APIs. 
 
 ## 🔹 **Postman Collections**
 * [Reqres API](https://github.com/GuzelyaN/Postman/blob/Overview/Reqres%20API.postman_collection.json)
