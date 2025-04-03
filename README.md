@@ -26,6 +26,7 @@ Explore different APIs with the following sandboxes:
    - Allows 100–500 requests per day.  
    - Suitable for testing and small projects.  
    - Limitations on request frequency (usually 1-2 requests per second).
+ * **HH.ru**: [hh.ru](https://api.hh.ru/openapi/redoc)  
 
 ## 🔹 **Useful Links**
 * [Habr article about sandboxes](https://habr.com/ru/articles/881814/)  
